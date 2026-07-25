@@ -1,0 +1,74 @@
+/* iOS Bottom Tab Bar & Mobile Navigation */
+.ios-tab-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0 0.5rem;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ios-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-decoration: none;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ios-tab-icon {
+  font-size: 1.4rem;
+  transition: transform 0.2s ease;
+}
+
+.ios-tab-item.active {
+  color: var(--accent-blue);
+}
+
+.ios-tab-item.active .ios-tab-icon {
+  transform: translateY(-2px) scale(1.1);
+}
+
+.ios-tab-item:active {
+  transform: scale(0.92);
+}
+
+/* Mobile Breakpoint Configurations */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Occult sidebar on mobile view in favor of iOS Tab Bar */
+  }
+
+  .ios-tab-bar {
+    display: flex;
+  }
+
+  .dashboard-view {
+    padding: 1.25rem 1rem;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 1rem;
+  }
+}

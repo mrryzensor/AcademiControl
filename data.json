@@ -1,0 +1,98 @@
+{
+  "tenants": [
+    {
+      "id": "tenant_main_01",
+      "name": "Colegio Central AcademiControl",
+      "country": "Perú",
+      "city": "Lima",
+      "type": "Colegio Central"
+    }
+  ],
+  "roles": [
+    {
+      "id": "super_admin",
+      "name": "Super Admin",
+      "description": "Administración global SaaS"
+    },
+    {
+      "id": "school_admin",
+      "name": "Administrador de Colegio",
+      "description": "Gestión integral de sucursal/colegio"
+    },
+    {
+      "id": "staff",
+      "name": "Personal Administrativo",
+      "description": "Pagos, matrículas y cobros"
+    },
+    {
+      "id": "teacher",
+      "name": "Docente",
+      "description": "Notas, asistencia y temas"
+    },
+    {
+      "id": "student",
+      "name": "Alumno",
+      "description": "Consulta de notas y certificados"
+    },
+    {
+      "id": "parent",
+      "name": "Padre / Apoderado",
+      "description": "Monitoreo de rendimiento e hijos"
+    }
+  ],
+  "users": [
+    {
+      "id": "user_superadmin_01",
+      "tenant_id": "tenant_main_01",
+      "name": "David (Super Admin)",
+      "email": "daviex14@gmail.com",
+      "password": "$2a$10$He47.rO6bXl/fD/usfwoFORhLuCZfI.6SSUeQKpMR/FTtU.2OomWe",
+      "role_id": "super_admin"
+    },
+    {
+      "id": "user_school_admin",
+      "tenant_id": "tenant_main_01",
+      "name": "Director General",
+      "email": "director@colegio.edu",
+      "password": "$2a$10$He47.rO6bXl/fD/usfwoFORhLuCZfI.6SSUeQKpMR/FTtU.2OomWe",
+      "role_id": "school_admin"
+    },
+    {
+      "id": "user_staff",
+      "tenant_id": "tenant_main_01",
+      "name": "Secretaría Académica",
+      "email": "secretaria@colegio.edu",
+      "password": "$2a$10$He47.rO6bXl/fD/usfwoFORhLuCZfI.6SSUeQKpMR/FTtU.2OomWe",
+      "role_id": "staff"
+    },
+    {
+      "id": "user_teacher",
+      "tenant_id": "tenant_main_01",
+      "name": "Prof. Carlos Mendoza",
+      "email": "carlos.mendoza@colegio.edu",
+      "password": "$2a$10$He47.rO6bXl/fD/usfwoFORhLuCZfI.6SSUeQKpMR/FTtU.2OomWe",
+      "role_id": "teacher"
+    },
+    {
+      "id": "user_student",
+      "tenant_id": "tenant_main_01",
+      "name": "Lucía Fernández",
+      "email": "lucia.student@colegio.edu",
+      "password": "$2a$10$He47.rO6bXl/fD/usfwoFORhLuCZfI.6SSUeQKpMR/FTtU.2OomWe",
+      "role_id": "student"
+    },
+    {
+      "id": "user_parent",
+      "tenant_id": "tenant_main_01",
+      "name": "Roberto Fernández (Padre)",
+      "email": "roberto.parent@gmail.com",
+      "password": "$2a$10$He47.rO6bXl/fD/usfwoFORhLuCZfI.6SSUeQKpMR/FTtU.2OomWe",
+      "role_id": "parent"
+    }
+  ],
+  "academic_levels": [],
+  "courses": [],
+  "grades": [],
+  "attendance": [],
+  "sync_events": []
+}

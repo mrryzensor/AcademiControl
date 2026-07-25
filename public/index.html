@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AcademiControl SaaS - Plataforma Académica Offline-First</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/ios-navigation.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Chart.js para Dashboards -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- SheetJS CDN para exportación a Excel (.xlsx) -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <!-- Contenedor Global de Toasts -->
+    <div id="toast-container"></div>
+
+    <!-- Contenedor Global de Modales -->
+    <div id="modal-container"></div>
+
+    <!-- Screen de Login -->
+    <div id="login-screen" class="login-container">
+        <div class="login-card glass-panel">
+            <div style="text-align: center;">
+                <div class="sidebar-brand-icon" style="margin: 0 auto 0.75rem auto; width: 48px; height: 48px;">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+                <h2 class="gradient-text" style="font-size: 1.6rem; font-weight: 700;">AcademiControl</h2>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem;">Plataforma Académica Offline-First</p>
+            </div>
+
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" class="form-input" value="daviex14@gmail.com" required>
+                </div>
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" class="form-input" value="Admin123!" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1.25rem;">
+                    <i data-lucide="log-in"></i> Iniciar Sesión
+                </button>
+            </form>
+
+            <div style="border-top: 1px solid var(--bg-card-border); padding-top: 1rem; margin-top: 0.5rem;">
+                <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-bottom: 0.5rem;">Prueba rápida con otros roles demo:</p>
+                <div class="role-switcher-bar" style="justify-content: center;">
+                    <button class="role-chip" onclick="quickLogin('director@colegio.edu')">Dir. Colegio</button>
+                    <button class="role-chip" onclick="quickLogin('secretaria@colegio.edu')">Staff Admin</button>
+                    <button class="role-chip" onclick="quickLogin('carlos.mendoza@colegio.edu')">Docente</button>
+                    <button class="role-chip" onclick="quickLogin('lucia.student@colegio.edu')">Alumno</button>
+                    <button class="role-chip" onclick="quickLogin('roberto.parent@gmail.com')">Apoderado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layout Principal de la Aplicación -->
+    <div id="app-container" style="display: none;">
+        <!-- Sidebar Desktop con Lucide SVG -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-brand-icon">
+                    <i data-lucide="graduation-cap"></i>
+                </div>
+                <div>
+                    <h3 style="font-size: 1rem; font-weight: 700;">AcademiControl</h3>
+                    <span style="font-size: 0.7rem; color: var(--accent-blue);">SaaS Enterprise</span>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-item active" onclick="switchTab('dashboard', this)">
+                    <i data-lucide="layout-dashboard"></i> Dashboard
+                </li>
+                <li class="sidebar-item" onclick="switchTab('academic', this)">
+                    <i data-lucide="school"></i> Académico & Niveles
+                </li>
+                <li class="sidebar-item" onclick="switchTab('users', this)">
+                    <i data-lucide="users"></i> Usuarios & Roles
+                </li>
+                <li class="sidebar-item" onclick="switchTab('grades', this)">
+                    <i data-lucide="award"></i> Calificaciones
+                </li>
+                <li class="sidebar-item" onclick="switchTab('certificates', this)">
+                    <i data-lucide="file-badge"></i> Certificados PDF
+                </li>
+                <li id="menu-workload-item" class="sidebar-item" onclick="switchTab('workload', this)" style="display:none;">
+                    <i data-lucide="book-open-check"></i> Carga Académica
+                </li>
+                <li id="menu-permissions-item" class="sidebar-item" onclick="switchTab('permissions', this)" style="display:none;">
+                    <i data-lucide="shield-check"></i> Matriz de Permisos
+                </li>
+                <li class="sidebar-item" onclick="switchTab('sync', this)">
+                    <i data-lucide="refresh-cw"></i> Sincronización
+                </li>
+
+            </ul>
+
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--bg-card-border);">
+                <button class="btn-primary" style="width: 100%; background: rgba(239,68,68,0.2); color: #f87171; border: 1px solid rgba(239,68,68,0.3);" onclick="logout()">
+                    <i data-lucide="log-out"></i> Cerrar Sesión
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1 id="view-title" class="gradient-text" style="font-size: 1.4rem;">Dashboard General</h1>
+                    <p id="view-subtitle" style="font-size: 0.8rem; color: var(--text-muted);">Cargando indicadores...</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <div id="connection-status" class="status-pill online">
+                        <i data-lucide="wifi" style="width:14px; height:14px;"></i> Online
+                    </div>
+                    <div class="user-badge">
+                        <i data-lucide="user" style="width:16px; height:16px;"></i>
+                        <div style="display: flex; flex-direction: column;">
+                            <span id="user-display-name" style="font-size: 0.85rem; font-weight: 600;">David</span>
+                            <span id="user-display-role" style="font-size: 0.7rem; color: var(--accent-purple);">Super Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Área de Vistas Dinámicas -->
+            <div id="dynamic-content-view" class="dashboard-view">
+                <!-- Se llena mediante app.js -->
+            </div>
+        </main>
+
+        <!-- iOS Mobile Bottom Tab Bar -->
+        <nav class="ios-tab-bar">
+            <div class="ios-tab-item active" onclick="switchTab('dashboard', this)">
+                <i data-lucide="layout-dashboard" class="ios-tab-icon"></i>
+                <span>Inicio</span>
+            </div>
+            <div class="ios-tab-item" onclick="switchTab('academic', this)">
+                <i data-lucide="school" class="ios-tab-icon"></i>
+                <span>Cursos</span>
+            </div>
+            <div class="ios-tab-item" onclick="switchTab('grades', this)">
+                <i data-lucide="award" class="ios-tab-icon"></i>
+                <span>Notas</span>
+            </div>
+            <div class="ios-tab-item" onclick="switchTab('certificates', this)">
+                <i data-lucide="file-badge" class="ios-tab-icon"></i>
+                <span>Certif.</span>
+            </div>
+            <div class="ios-tab-item" onclick="logout()">
+                <i data-lucide="log-out" class="ios-tab-icon"></i>
+                <span>Salir</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

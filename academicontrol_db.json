@@ -1,0 +1,374 @@
+{
+  "tenants": [
+    {
+      "id": "tenant_main_01",
+      "name": "Colegio Central AcademiControl",
+      "country": "Perú",
+      "city": "Lima",
+      "type": "Colegio Central"
+    }
+  ],
+  "roles": [
+    {
+      "id": "super_admin",
+      "name": "Super Admin",
+      "description": "Administración global SaaS"
+    },
+    {
+      "id": "school_admin",
+      "name": "Administrador de Colegio",
+      "description": "Gestión integral de sucursal"
+    },
+    {
+      "id": "staff",
+      "name": "Personal Administrativo",
+      "description": "Pagos, matrículas y cobros"
+    },
+    {
+      "id": "teacher",
+      "name": "Docente",
+      "description": "Notas, asistencia y temas"
+    },
+    {
+      "id": "student",
+      "name": "Alumno",
+      "description": "Consulta de notas y certificados"
+    },
+    {
+      "id": "parent",
+      "name": "Padre / Apoderado",
+      "description": "Monitoreo de rendimiento e hijos"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_super",
+      "tenant_id": "tenant_main_01",
+      "name": "David (Super Admin)",
+      "email": "daviex14@gmail.com",
+      "password": "$2a$10$lsEgFp0Y71fNKHgg..pBYO3L4Zy.vssPEKviE6.PvoEDydebsoo.i",
+      "role_id": "super_admin"
+    },
+    {
+      "id": "usr_dir",
+      "tenant_id": "tenant_main_01",
+      "name": "Director General",
+      "email": "director@colegio.edu",
+      "password": "$2a$10$lsEgFp0Y71fNKHgg..pBYO3L4Zy.vssPEKviE6.PvoEDydebsoo.i",
+      "role_id": "school_admin"
+    },
+    {
+      "id": "usr_sec",
+      "tenant_id": "tenant_main_01",
+      "name": "Secretaría Académica",
+      "email": "secretaria@colegio.edu",
+      "password": "$2a$10$lsEgFp0Y71fNKHgg..pBYO3L4Zy.vssPEKviE6.PvoEDydebsoo.i",
+      "role_id": "staff"
+    },
+    {
+      "id": "usr_teacher",
+      "tenant_id": "tenant_main_01",
+      "name": "Prof. Carlos Mendoza",
+      "email": "carlos.mendoza@colegio.edu",
+      "password": "$2a$10$lsEgFp0Y71fNKHgg..pBYO3L4Zy.vssPEKviE6.PvoEDydebsoo.i",
+      "role_id": "teacher"
+    },
+    {
+      "id": "usr_student",
+      "tenant_id": "tenant_main_01",
+      "name": "Lucía Fernández",
+      "email": "lucia.student@colegio.edu",
+      "password": "$2a$10$lsEgFp0Y71fNKHgg..pBYO3L4Zy.vssPEKviE6.PvoEDydebsoo.i",
+      "role_id": "student"
+    },
+    {
+      "id": "usr_parent",
+      "tenant_id": "tenant_main_01",
+      "name": "Roberto Fernández",
+      "email": "roberto.parent@gmail.com",
+      "password": "$2a$10$lsEgFp0Y71fNKHgg..pBYO3L4Zy.vssPEKviE6.PvoEDydebsoo.i",
+      "role_id": "parent"
+    },
+    {
+      "id": "usr_1784855996586",
+      "tenant_id": "tenant_main_01",
+      "name": "edgar quiroz",
+      "email": "equiroz@gmail.com",
+      "password": "$2a$10$bY.1C9FctlP14nAnzbQC1.Ti0N27eDtQB6/kRbli3GVgCLkPJ0PZ6",
+      "role_id": "student"
+    },
+    {
+      "id": "usr_1784857020159",
+      "tenant_id": "tenant_main_01",
+      "name": "Jose Daniel",
+      "email": "josedani@gmail.com",
+      "password": "$2a$10$0nstR5MkpQ3zGlpR1xKFhucsGv1LM3dCKhpFUxueEyG6IWi9E6gkm",
+      "role_id": "teacher"
+    },
+    {
+      "id": "usr_1784942249532",
+      "tenant_id": "tenant_main_01",
+      "name": "Alumno Prueba Auto",
+      "email": "alumno.auto@colegio.edu",
+      "password": "$2a$10$zMYxIuHy/f70yTKKNo1iwes1dRpDtoDxoST/6MZ3cyYxaoxpv1zoK",
+      "role_id": "student",
+      "level_id": "lvl_sec",
+      "grade": "5° Año",
+      "section": "Sección A"
+    },
+    {
+      "id": "usr_1784942299773",
+      "tenant_id": "tenant_main_01",
+      "name": "Alumno Prueba Auto 2",
+      "email": "alumno.auto2@colegio.edu",
+      "password": "$2a$10$rE0XikOpidi/44YVKmUZEu87LG7PFR0.LZTLdduXO9jZFLoEL7gzi",
+      "role_id": "student",
+      "level_id": "lvl_sec",
+      "grade": "5° Año",
+      "section": "Sección A"
+    },
+    {
+      "id": "usr_1784942347303",
+      "tenant_id": "tenant_main_01",
+      "name": "Alumno Prueba Final",
+      "email": "alumno.final@colegio.edu",
+      "password": "$2a$10$xZgRDmF/EDxWgP51imZow.ZC9Ggaypj8.iWwdhe.8fiTcGVGIIOLa",
+      "role_id": "student",
+      "level_id": "lvl_sec",
+      "grade": "5° Año",
+      "section": "Sección A"
+    },
+    {
+      "id": "usr_1784942386301",
+      "tenant_id": "tenant_main_01",
+      "name": "Alumno Prueba 5to",
+      "email": "alumno.5to@colegio.edu",
+      "password": "$2a$10$D.HmanR5cf3RX5YjsKGfq.66CMWUSu6qkdn8UWAlsMLcmwnEHOxly",
+      "role_id": "student",
+      "level_id": "lvl_sec",
+      "grade": "5to",
+      "section": "Sección A"
+    },
+    {
+      "id": "usr_1784942441818",
+      "tenant_id": "tenant_main_01",
+      "name": "Carlos Alberto",
+      "email": "carlosch@gm.co",
+      "password": "$2a$10$5J3g95NPFaF3BWjbNp8MZOKu0bTJuHtqtKka2rIefSn28kVVRxZ02",
+      "role_id": "student",
+      "level_id": "lvl_pri",
+      "grade": "1ro",
+      "section": "A"
+    }
+  ],
+  "parent_student": [
+    {
+      "parent_id": "usr_parent",
+      "student_id": "usr_student"
+    }
+  ],
+  "academic_levels": [
+    {
+      "id": "lvl_pri",
+      "tenant_id": "tenant_main_01",
+      "name": "Primaria",
+      "level_order": 1
+    },
+    {
+      "id": "lvl_sec",
+      "tenant_id": "tenant_main_01",
+      "name": "Secundaria",
+      "level_order": 2
+    }
+  ],
+  "courses": [
+    {
+      "id": "crs_mat",
+      "level_id": "lvl_sec",
+      "name": "Matemáticas Avanzadas",
+      "code": "MAT-501",
+      "grade": "1ro",
+      "section": "Sección A"
+    },
+    {
+      "id": "crs_fis",
+      "level_id": "lvl_sec",
+      "name": "Física Aplicada",
+      "code": "FIS-302",
+      "grade": "5to",
+      "section": "Sección A"
+    },
+    {
+      "id": "crs_qui",
+      "level_id": "lvl_sec",
+      "name": "Química Orgánica",
+      "code": "QUI-401",
+      "grade": "3ro",
+      "section": "Sección A"
+    },
+    {
+      "id": "crs_his",
+      "level_id": "lvl_sec",
+      "name": "Historia Universal",
+      "code": "HIS-201",
+      "grade": "2do",
+      "section": "Sección A"
+    },
+    {
+      "id": "crs_1784941759126",
+      "level_id": "lvl_pri",
+      "name": "Matemáticas",
+      "code": "Mat-101",
+      "grade": "1ro",
+      "section": "A"
+    }
+  ],
+  "grades": [
+    {
+      "id": "grd_1",
+      "student_id": "usr_student",
+      "course_id": "crs_mat",
+      "teacher_id": "usr_teacher",
+      "term": "Trimestre 1",
+      "score": 18.5,
+      "comments": "Excelente desempeño en álgebra."
+    },
+    {
+      "id": "grd_2",
+      "student_id": "usr_student",
+      "course_id": "crs_fis",
+      "teacher_id": "usr_teacher",
+      "term": "Trimestre 1",
+      "score": 16,
+      "comments": "Buen trabajo en laboratorios."
+    },
+    {
+      "id": "grd_3",
+      "student_id": "usr_student",
+      "course_id": "crs_qui",
+      "teacher_id": "usr_teacher",
+      "term": "Trimestre 1",
+      "score": 17.5,
+      "comments": "Participativo en clases."
+    },
+    {
+      "id": "grd_1784856005272",
+      "student_id": "usr_1784855996586",
+      "course_id": "crs_mat",
+      "teacher_id": "usr_super",
+      "term": "Trimestre 1",
+      "score": 18,
+      "comments": ""
+    }
+  ],
+  "attendance": [],
+  "sync_events": [],
+  "teacher_courses": [
+    {
+      "teacher_id": "usr_teacher",
+      "course_id": "crs_mat"
+    },
+    {
+      "teacher_id": "usr_teacher",
+      "course_id": "crs_fis"
+    },
+    {
+      "teacher_id": "usr_teacher",
+      "course_id": "crs_1784941759126"
+    }
+  ],
+  "role_permissions": {
+    "super_admin": {
+      "view_academic": true,
+      "edit_academic": true,
+      "delete_academic": true,
+      "view_users": true,
+      "edit_users": true,
+      "delete_users": true,
+      "assign_workload": true,
+      "view_grades": true,
+      "edit_grades": true,
+      "delete_grades": true
+    },
+    "school_admin": {
+      "view_academic": true,
+      "edit_academic": true,
+      "delete_academic": true,
+      "view_users": true,
+      "edit_users": true,
+      "delete_users": true,
+      "assign_workload": true,
+      "view_grades": true,
+      "edit_grades": true,
+      "delete_grades": true
+    },
+    "staff": {
+      "view_academic": true,
+      "edit_academic": true,
+      "delete_academic": false,
+      "view_users": true,
+      "edit_users": true,
+      "delete_users": false,
+      "assign_workload": true,
+      "view_grades": true,
+      "edit_grades": true,
+      "delete_grades": false
+    },
+    "teacher": {
+      "view_academic": true,
+      "edit_academic": true,
+      "delete_academic": false,
+      "view_users": true,
+      "edit_users": true,
+      "delete_users": false,
+      "assign_workload": true,
+      "view_grades": true,
+      "edit_grades": true,
+      "delete_grades": true
+    },
+    "parent": {
+      "view_academic": true,
+      "edit_academic": false,
+      "delete_academic": false,
+      "view_users": true,
+      "edit_users": true,
+      "delete_users": false,
+      "assign_workload": false,
+      "view_grades": true,
+      "edit_grades": false,
+      "delete_grades": false
+    },
+    "student": {
+      "view_academic": true,
+      "edit_academic": false,
+      "delete_academic": false,
+      "view_users": true,
+      "edit_users": false,
+      "delete_users": false,
+      "assign_workload": false,
+      "view_grades": true,
+      "edit_grades": false,
+      "delete_grades": false
+    }
+  },
+  "student_courses": [
+    {
+      "student_id": "usr_1784942386301",
+      "course_id": "crs_fis"
+    },
+    {
+      "student_id": "usr_1784942441818",
+      "course_id": "crs_1784941759126"
+    }
+  ],
+  "course_lessons": [
+    {
+      "id": "lsn_1784942734025",
+      "course_id": "crs_mat",
+      "title": "Clase 1: Ecuaciones y Funciones",
+      "content_html": "<h3>Bienvenido a la Clase 1</h3><p>En esta clase veremos ecuaciones avanzadas y ejercicios prácticos.</p>",
+      "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "created_at": "2026-07-25T01:25:34.025Z"
+    }
+  ]
+}
