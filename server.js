@@ -10,6 +10,7 @@ const academicController = require('./src/modules/academic/academic.controller')
 const usersController = require('./src/modules/users/users.controller');
 const gradesController = require('./src/modules/grades/grades.controller');
 const permissionsController = require('./src/modules/permissions/permissions.controller');
+const quizController = require('./src/modules/quizzes/quiz.controller');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -34,6 +35,7 @@ app.use('/api/v1/academic', academicController);
 app.use('/api/v1/users', usersController);
 app.use('/api/v1/grades', gradesController);
 app.use('/api/v1/permissions', permissionsController.router);
+app.use('/api/v1/quizzes', quizController);
 
 // Single Page Application Fallback
 app.get('*', (req, res) => {

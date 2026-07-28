@@ -35,6 +35,9 @@ class SQLiteEngine {
         if (!this.data.course_lessons) this.data.course_lessons = [];
         if (!this.data.parent_student) this.data.parent_student = [];
         if (!this.data.role_permissions) this.data.role_permissions = {};
+        if (!this.data.user_api_keys) this.data.user_api_keys = {};
+        if (!this.data.course_quizzes) this.data.course_quizzes = [];
+        if (!this.data.quiz_sessions) this.data.quiz_sessions = {};
         this.seedInitial();
     }
 

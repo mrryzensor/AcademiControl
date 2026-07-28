@@ -31,6 +31,27 @@ body {
   overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
 /* Glassmorphism Classes */
 .glass-panel {
   background: var(--bg-card);
@@ -221,12 +242,16 @@ body {
 /* Tables UI */
 .data-table-container {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-top: 1rem;
+  border-radius: var(--radius-md);
 }
 
 .data-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
   text-align: left;
 }
@@ -237,12 +262,14 @@ body {
   color: var(--text-muted);
   font-size: 0.85rem;
   border-bottom: 1px solid var(--bg-card-border);
+  white-space: nowrap;
 }
 
 .data-table td {
   padding: 0.85rem 1rem;
   border-bottom: 1px solid var(--bg-card-border);
   font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 .data-table tr:hover {
@@ -289,6 +316,17 @@ body {
   font-size: 0.95rem;
   outline: none;
   transition: all 0.2s ease;
+}
+
+/* Ocultar botones incrementales nativos (spin buttons) en modo oscuro */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .form-input:focus, .form-select:focus {
@@ -411,24 +449,39 @@ svg.lucide, .sidebar-item svg, .role-chip svg, .btn-primary svg, button svg, .io
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   z-index: 9000;
   animation: fadeIn 0.2s ease;
+  overflow-y: auto;
 }
 
 .modal-card {
   width: 100%;
-  max-width: 500px;
-  padding: 2rem;
+  max-width: 520px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+  .modal-card {
+    padding: 1.25rem 1rem;
+    max-height: 95vh;
+  }
 }
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

@@ -89,6 +89,24 @@ function closeModal() {
     document.getElementById('modal-container').innerHTML = '';
 }
 
+// Confirm Modal Reemplazo de alerts / confirm nativos
+function showConfirmModal(title, message, onConfirm) {
+    showModal(title, `
+        <div style="display:flex; flex-direction:column; gap:1.25rem; text-align:center; padding:0.5rem 0;">
+            <p style="font-size:1rem; color:var(--text-main); line-height:1.5;">${message}</p>
+            <div style="display:flex; justify-content:center; gap:0.75rem; margin-top:0.5rem;">
+                <button class="btn-primary" style="background:rgba(255,255,255,0.1); color:var(--text-muted);" onclick="closeModal()">Cancelar</button>
+                <button class="btn-primary" style="background:var(--danger);" id="btn-confirm-action">Confirmar</button>
+            </div>
+        </div>
+    `, true);
+
+    document.getElementById('btn-confirm-action').onclick = () => {
+        closeModal();
+        if (typeof onConfirm === 'function') onConfirm();
+    };
+}
+
 // Initial Boot
 document.addEventListener('DOMContentLoaded', () => {
     updateOnlineStatus();
@@ -561,14 +579,16 @@ function filterAcademicView() {
 
             return `
                 <tr style="border-bottom:1px solid var(--bg-card-border);">
-                    <td style="padding:0.5rem 0;"><strong>${c.code}</strong></td>
-                    <td style="padding:0.5rem 0;">${c.name}</td>
-                    <td style="padding:0.5rem 0;"><span class="role-chip" style="background:rgba(59,130,246,0.15); color:#60a5fa;">${c.grade || 'General'}</span></td>
-                    <td style="padding:0.5rem 0;"><span class="role-chip" style="background:rgba(16,185,129,0.15); color:#34d399;">${c.section || 'Sección A'}</span></td>
-                    <td style="padding:0.5rem 0; text-align:right; display:flex; gap:0.35rem; justify-content:flex-end;">
-                        ${lessonsBtn}
-                        ${editCrsBtn}
-                        ${deleteCrsBtn}
+                    <td style="padding:0.75rem 0.5rem; white-space:nowrap;"><strong>${c.code}</strong></td>
+                    <td style="padding:0.75rem 0.5rem; white-space:nowrap;">${c.name}</td>
+                    <td style="padding:0.75rem 0.5rem; white-space:nowrap;"><span class="role-chip" style="background:rgba(59,130,246,0.15); color:#60a5fa;">${c.grade || 'General'}</span></td>
+                    <td style="padding:0.75rem 0.5rem; white-space:nowrap;"><span class="role-chip" style="background:rgba(16,185,129,0.15); color:#34d399;">${c.section || 'Sección A'}</span></td>
+                    <td style="padding:0.75rem 0.5rem; text-align:right; white-space:nowrap;">
+                        <div style="display:inline-flex; gap:0.35rem; align-items:center; justify-content:flex-end;">
+                            ${lessonsBtn}
+                            ${editCrsBtn}
+                            ${deleteCrsBtn}
+                        </div>
                     </td>
                 </tr>
             `;
@@ -594,7 +614,7 @@ function filterAcademicView() {
 
 
         card.innerHTML = `
-            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--bg-card-border); padding-bottom:0.75rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--bg-card-border); padding-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
                 <h3 class="gradient-text"><i data-lucide="book-open" style="width:18px;"></i> ${lvl.name} (Orden: ${lvl.level_order})</h3>
                 <div style="display:flex; gap:0.5rem;">
                     ${addCrsBtn}
@@ -602,8 +622,8 @@ function filterAcademicView() {
                     ${deleteLvlBtn}
                 </div>
             </div>
-            <div style="margin-top:1rem;">
-                <table style="width:100%; text-align:left;">
+            <div class="data-table-container">
+                <table class="data-table" style="width:100%; text-align:left;">
                     <thead>
                         <tr style="color:var(--text-muted); font-size:0.85rem;">
                             <th>Código</th><th>Nombre de Curso</th><th>Grado</th><th>Sección</th><th style="text-align:right;">Acciones</th>
@@ -670,15 +690,16 @@ function openEditLevelModal(id, currentName, currentOrder) {
 }
 
 async function deleteLevel(id) {
-    if (!confirm("¿Deseas eliminar este nivel académico y todos sus cursos?")) return;
-    try {
-        await fetch(`/api/v1/academic/levels/${id}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${authToken}` }
-        });
-        showToast("Nivel eliminado", "success");
-        renderAcademicView();
-    } catch (err) { showToast("Error al eliminar nivel", "error"); }
+    showConfirmModal("Eliminar Nivel Académico", "¿Deseas eliminar este nivel académico y todos sus cursos?", async () => {
+        try {
+            await fetch(`/api/v1/academic/levels/${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Nivel eliminado", "success");
+            renderAcademicView();
+        } catch (err) { showToast("Error al eliminar nivel", "error"); }
+    });
 }
 
 function openNewCourseModal(levelId) {
@@ -740,42 +761,71 @@ function openEditCourseModal(id, name, code, grade, section) {
 }
 
 async function deleteCourse(id) {
-    if (!confirm("¿Deseas eliminar este curso?")) return;
-    try {
-        await fetch(`/api/v1/academic/courses/${id}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${authToken}` }
-        });
-        showToast("Curso eliminado", "success");
-        renderAcademicView();
-    } catch (err) { showToast("Error al eliminar curso", "error"); }
+    showConfirmModal("Eliminar Curso", "¿Deseas eliminar este curso?", async () => {
+        try {
+            await fetch(`/api/v1/academic/courses/${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Curso eliminado", "success");
+            renderAcademicView();
+        } catch (err) { showToast("Error al eliminar curso", "error"); }
+    });
 }
 
 /* ================= GESTOR DE CLASES Y CONTENIDO DE CURSOS ================= */
+
+async function deleteQuizItem(quizId, courseId, courseName) {
+    showConfirmModal("Eliminar Quiz", "¿Deseas eliminar este quiz?", async () => {
+        try {
+            await fetch(`/api/v1/quizzes/${quizId}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Quiz eliminado", "success");
+            openCourseLessonsModal(courseId, courseName);
+        } catch(err) {
+            showToast("Error al eliminar quiz", "error");
+        }
+    });
+}
+
 async function openCourseLessonsModal(courseId, courseName) {
     const isSuperAdmin = !currentUser || currentUser.email === 'daviex14@gmail.com' || currentUser.role_id === 'super_admin';
     const canEditAcademic = isSuperAdmin || (myRolePermissions && myRolePermissions.edit_academic !== false);
 
-    showModal(`Aula Virtual & Clases: ${courseName}`, `
+    showModal(`Aula Virtual, Clases & Quizzes: ${courseName}`, `
         <div style="display:flex; flex-direction:column; gap:1.25rem; width:100%; height:100%;">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; border-bottom:1px solid var(--bg-card-border); padding-bottom:0.75rem; flex-shrink:0;">
-                <span style="font-size:0.9rem; color:var(--text-muted);">Clases publicadas en esta materia:</span>
-                ${canEditAcademic ? `
-                    <button class="btn-primary" style="padding:0.4rem 0.8rem; font-size:0.85rem;" onclick="openNewLessonModal('${courseId}', '${courseName}')">
-                        <i data-lucide="plus-circle"></i> Crear Nueva Clase
+                <span style="font-size:0.9rem; color:var(--text-muted);">Clases y Quizzes interactivos publicados en esta materia:</span>
+                <div style="display:flex; gap:0.5rem;">
+                    <button class="role-chip" style="background:rgba(168,85,247,0.2); color:#c084fc; border:1px solid rgba(168,85,247,0.3); padding:0.4rem 0.8rem;" onclick="QuizLiveEngine.openPlayerJoinModal()">
+                        <i data-lucide="gamepad-2" style="width:14px;"></i> Unirse a Quiz
                     </button>
-                ` : ''}
+                    ${canEditAcademic ? `
+                        <button class="btn-primary" style="background:linear-gradient(135deg, #8b5cf6, #ec4899); padding:0.4rem 0.8rem; font-size:0.85rem;" onclick="QuizLiveEngine.openQuizWizard('${courseId}', '${courseName}')">
+                            <i data-lucide="sparkles"></i> Añadir Quiz con IA
+                        </button>
+                        <button class="btn-primary" style="padding:0.4rem 0.8rem; font-size:0.85rem;" onclick="openNewLessonModal('${courseId}', '${courseName}')">
+                            <i data-lucide="plus-circle"></i> Crear Nueva Clase
+                        </button>
+                    ` : ''}
+                </div>
             </div>
             <div id="course-lessons-list" style="flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:1.25rem; padding-right:0.3rem;">
-                <p style="color:var(--text-muted); font-size:0.9rem;">Cargando clases del curso...</p>
+                <p style="color:var(--text-muted); font-size:0.9rem;">Cargando contenido del curso...</p>
             </div>
         </div>
     `, 'full');
 
     try {
-        const res = await fetch(`/api/v1/academic/courses/${courseId}/lessons`, { headers: { 'Authorization': `Bearer ${authToken}` } });
-        const lessons = await res.json();
-        renderCourseLessonsList(courseId, courseName, lessons, canEditAcademic);
+        const [resLessons, resQuizzes] = await Promise.all([
+            fetch(`/api/v1/academic/courses/${courseId}/lessons`, { headers: { 'Authorization': `Bearer ${authToken}` } }),
+            fetch(`/api/v1/quizzes/courses/${courseId}`, { headers: { 'Authorization': `Bearer ${authToken}` } })
+        ]);
+        const lessons = await resLessons.json();
+        const quizzes = resQuizzes.ok ? await resQuizzes.json() : [];
+        renderCourseLessonsList(courseId, courseName, lessons, quizzes, canEditAcademic);
     } catch(e) {
         showToast("Error al cargar las clases del curso", "error");
     }
@@ -832,17 +882,48 @@ function getUniversalEmbedUrl(url) {
     return cleanUrl;
 }
 
-function renderCourseLessonsList(courseId, courseName, lessons, canEditAcademic) {
+function renderCourseLessonsList(courseId, courseName, lessons = [], quizzes = [], canEditAcademic = false) {
     const listEl = document.getElementById('course-lessons-list');
     if (!listEl) return;
     listEl.innerHTML = '';
 
-    if (!lessons || lessons.length === 0) {
-        listEl.innerHTML = '<div style="padding:3rem; text-align:center; color:var(--text-muted);"><i data-lucide="video-off" style="width:48px; height:48px; opacity:0.5;"></i><p style="margin-top:0.75rem; font-size:1rem;">No hay clases publicadas aún para este curso.</p></div>';
+    if ((!lessons || lessons.length === 0) && (!quizzes || quizzes.length === 0)) {
+        listEl.innerHTML = '<div style="padding:3rem; text-align:center; color:var(--text-muted);"><i data-lucide="sparkles" style="width:48px; height:48px; opacity:0.5;"></i><p style="margin-top:0.75rem; font-size:1rem;">No hay clases ni quizzes publicados aún para este curso.</p></div>';
         if (window.lucide) lucide.createIcons();
         return;
     }
 
+    // 1. Renderizar Quizzes Interactivos
+    quizzes.forEach(q => {
+        const card = document.createElement('div');
+        card.style.cssText = "background:linear-gradient(135deg, rgba(139,92,246,0.15), rgba(236,72,153,0.15)); border:1px solid rgba(168,85,247,0.3); border-radius:12px; padding:1.25rem; display:flex; flex-direction:column; gap:0.75rem;";
+        
+        card.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:0.6rem;">
+                <h4 style="color:var(--text-main); font-size:1.15rem; font-weight:700;"><i data-lucide="zap" style="width:20px; color:#facc15;"></i> QUIZ: ${q.title}</h4>
+                <div style="display:flex; gap:0.5rem;">
+                    ${canEditAcademic ? `
+                        <button class="role-chip btn-edit" style="padding:0.4rem 0.8rem; font-size:0.85rem;" onclick="QuizLiveEngine.openEditQuizModal('${q.id}', '${courseId}', '${courseName}')">
+                            <i data-lucide="pencil" style="width:14px;"></i> Editar
+                        </button>
+                        <button class="btn-primary" style="background:#10b981; padding:0.4rem 0.8rem; font-size:0.85rem;" onclick="QuizLiveEngine.startLiveSession('${q.id}')">
+                            <i data-lucide="radio" style="width:14px;"></i> Transmitir en Vivo (QR)
+                        </button>
+                        <button class="role-chip btn-delete" onclick="deleteQuizItem('${q.id}', '${courseId}', '${courseName}')">
+                            <i data-lucide="trash-2" style="width:14px;"></i>
+                        </button>
+                    ` : ''}
+                </div>
+            </div>
+            <div style="display:flex; gap:1rem; font-size:0.85rem; color:var(--text-muted); flex-wrap:wrap;">
+                <span><i data-lucide="help-circle" style="width:14px;"></i> ${q.questions.length} Preguntas</span>
+                <span><i data-lucide="users" style="width:14px;"></i> Modo: ${q.mode === 'teams' ? 'Por Equipos' : 'Individual'}</span>
+            </div>
+        `;
+        listEl.appendChild(card);
+    });
+
+    // 2. Renderizar Clases Teóricas
     lessons.forEach(l => {
         const embedUrl = getUniversalEmbedUrl(l.youtube_url);
         const card = document.createElement('div');
@@ -875,6 +956,21 @@ function renderCourseLessonsList(courseId, courseName, lessons, canEditAcademic)
     });
 
     if (window.lucide) lucide.createIcons();
+}
+
+async function deleteQuizItem(quizId, courseId, courseName) {
+    showConfirmModal("Eliminar Quiz", "¿Deseas eliminar este quiz?", async () => {
+        try {
+            await fetch(`/api/v1/quizzes/${quizId}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Quiz eliminado", "success");
+            openCourseLessonsModal(courseId, courseName);
+        } catch(err) {
+            showToast("Error al eliminar quiz", "error");
+        }
+    });
 }
 
 function openNewLessonModal(courseId, courseName) {
@@ -1008,17 +1104,18 @@ async function openEditLessonModal(lessonId, courseId, courseName) {
 }
 
 async function deleteLesson(lessonId, courseId, courseName) {
-    if (!confirm("¿Deseas eliminar esta clase del curso?")) return;
-    try {
-        await fetch(`/api/v1/academic/lessons/${lessonId}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${authToken}` }
-        });
-        showToast("Clase eliminada", "success");
-        openCourseLessonsModal(courseId, courseName);
-    } catch(err) {
-        showToast("Error al eliminar clase", "error");
-    }
+    showConfirmModal("Eliminar Clase", "¿Deseas eliminar esta clase del curso?", async () => {
+        try {
+            await fetch(`/api/v1/academic/lessons/${lessonId}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Clase eliminada", "success");
+            openCourseLessonsModal(courseId, courseName);
+        } catch(err) {
+            showToast("Error al eliminar clase", "error");
+        }
+    });
 }
 
 /* ================= 3. MÓDULO DE USUARIOS (EDITABLE, ELIMINABLE, BUSCABLE, EXPORTABLE XLSX) ================= */
@@ -1559,15 +1656,31 @@ function openEditUserModal(id, currentName, currentEmail, currentRole) {
 }
 
 async function deleteUser(id) {
-    if (!confirm("¿Eliminar este usuario del sistema?")) return;
-    try {
-        await fetch(`/api/v1/users/${id}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${authToken}` }
-        });
-        showToast("Usuario eliminado", "success");
-        renderUsersView();
-    } catch (err) { showToast("Error al eliminar usuario", "error"); }
+    showConfirmModal("Eliminar Usuario", "¿Eliminar este usuario del sistema?", async () => {
+        try {
+            await fetch(`/api/v1/users/${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Usuario eliminado", "success");
+            renderUsersView();
+        } catch (err) { showToast("Error al eliminar usuario", "error"); }
+    });
+}
+
+/* ================= 4. MÓDULO DE CALIFICACIONES Y LIBRETA DE NOTAS INDIVIDUAL / MASIVA (EXPORTABLE XLSX) ================= */
+
+async function deleteGrade(id) {
+    showConfirmModal("Eliminar Nota", "¿Eliminar este registro de nota?", async () => {
+        try {
+            await fetch(`/api/v1/grades/${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Nota eliminada", "success");
+            renderGradesView();
+        } catch (err) { showToast("Error al eliminar nota", "error"); }
+    });
 }
 
 /* ================= 4. MÓDULO DE CALIFICACIONES Y LIBRETA DE NOTAS INDIVIDUAL / MASIVA (EXPORTABLE XLSX) ================= */
@@ -1856,15 +1969,16 @@ function openEditGradeModal(id, currentScore, currentComments) {
 }
 
 async function deleteGrade(id) {
-    if (!confirm("¿Eliminar este registro de nota?")) return;
-    try {
-        await fetch(`/api/v1/grades/${id}`, {
-            method: 'DELETE',
-            headers: { 'Authorization': `Bearer ${authToken}` }
-        });
-        showToast("Nota eliminada", "success");
-        renderGradesView();
-    } catch (err) { showToast("Error al eliminar nota", "error"); }
+    showConfirmModal("Eliminar Calificación", "¿Eliminar este registro de nota?", async () => {
+        try {
+            await fetch(`/api/v1/grades/${id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${authToken}` }
+            });
+            showToast("Nota eliminada", "success");
+            renderGradesView();
+        } catch (err) { showToast("Error al eliminar nota", "error"); }
+    });
 }
 
 /* ================= 5. MÓDULO DE CERTIFICADOS (EXPORTABLE XLSX) ================= */

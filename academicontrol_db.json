@@ -370,5 +370,1214 @@
       "youtube_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "created_at": "2026-07-25T01:25:34.025Z"
     }
-  ]
+  ],
+  "user_api_keys": {},
+  "course_quizzes": [
+    {
+      "id": "qz_1785200921261",
+      "course_id": "crs_mat",
+      "title": "Quiz de Historia Universal",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿En qué año cayó el Imperio Romano de Occidente?",
+          "options": [
+            "476 d. C.",
+            "1453 d. C.",
+            "vou 395 d. C.",
+            "800 d. C."
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "El Imperio Romano de Occidente cayó en el año 476 d. C. cuando el último emperador, Rómulo Augústulo, fue depuesto por el líder bárbaro Odoacro."
+        },
+        {
+          "id": "q_2",
+          "question": "¿Cuál fue la civilización constructora de Machu Picchu?",
+          "options": [
+            "Azteca",
+            "Maya",
+            "Inca",
+            "Olmeca"
+          ],
+          "correct_index": 2,
+          "time_seconds": 15,
+          "explanation": "Machu Picchu es una ciudadela inca ubicada en las alturas de los Andes en Perú, construida en el siglo XV."
+        },
+        {
+          "id": "q_3",
+          "question": "¿Qué evento marcó el inicio de la Revolución Francesa en 1789?",
+          "options": [
+            "La ejecución de Luis XVI",
+            "La Toma de la Bastilla",
+            "El golpe de Estado de Napoleón",
+            "La Declaración de los Derechos del Hombre"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "La Toma de la Bastilla el 14 de julio de 1789 simbolizó el fin del absolutismo monárquico y el inicio de la Revolución Francesa."
+        },
+        {
+          "id": "q_4",
+          "question": "¿Qué tratado puso fin oficialmente a la Primera Guerra Mundial?",
+          "options": [
+            "Tratado de Viena",
+            "Tratado de Tordesillas",
+            "Tratado de Versalles",
+            "Tratado de París"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "El Tratado de Versalles, firmado en 1919, impuso duras condiciones a Alemania y estableció las bases para el final de la Primera Guerra Mundial."
+        },
+        {
+          "id": "q_5",
+          "question": "¿Quién fue el líder del movimiento de independencia en la India basado en la no violencia?",
+          "options": [
+            "Jawaharlal Nehru",
+            "Mahatma Gandhi",
+            "Subhas Chandra Bose",
+            "Rabindranath Tagore"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "Mahatma Gandhi lideró a la India hacia la independencia del dominio británico utilizando la resistencia no violenta y la desobediencia civil."
+        },
+        {
+          "id": "q_6",
+          "question": "¿En qué siglo comenzó la Revolución Industrial?",
+          "options": [
+            "Siglo XVI",
+            "Siglo XVII",
+            "Siglo XVIII",
+            "Siglo XIX"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La Revolución Industrial comenzó en Gran Bretaña a mediados del siglo XVIII (alrededor de 1760), transformando la economía agraria en industrial."
+        },
+        {
+          "id": "q_7",
+          "question": "¿Qué imperio construyó una extensa red de calzadas y carreteras conocida como el 'Cursus Publicus'?",
+          "options": [
+            "Imperio Persa",
+            "Imperio Romano",
+            "Imperio Mongol",
+            "Imperio Británico"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "El Imperio Romano fue famoso por su avanzada ingeniería civil, destacando su red de calzadas que conectaba todo el territorio."
+        },
+        {
+          "id": "q_8",
+          "question": "¿Qué muro dividió la capital de Alemania durante la Guerra Fría y su caída simbolizó el fin de la misma?",
+          "options": [
+            "El Muro de Adriano",
+            "El Muro de Berlín",
+            "El Muro Atlántico",
+            "El Muro de Constantinopla"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "El Muro de Berlín dividió la ciudad desde 1961 hasta su caída en 1989, convirtiéndose en el símbolo más icónico de la Guerra Fría."
+        }
+      ],
+      "mode": "individual",
+      "default_time": 20,
+      "created_by": "usr_super",
+      "created_at": "2026-07-28T01:08:41.261Z"
+    },
+    {
+      "id": "qz_1785201388851",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre Chatbots para WhatsApp",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cuál es la principal ventaja de utilizar un chatbot en WhatsApp Business?",
+          "options": [
+            "Eliminar por completo la necesidad de empleados humanos",
+            "Atender a los clientes de forma automatizada las 24 horas del día",
+            "Garantizar que los mensajes nunca sean leídos por spam",
+            "Reducir el costo de la conexión a internet del teléfono"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Los chatbots permiten ofrecer respuestas instantáneas y atención continua 24/7, mejorando la satisfacción del cliente."
+        },
+        {
+          "id": "q_2",
+          "question": "¿Qué interfaz oficial proporciona Meta para conectar chatbots avanzados a WhatsApp?",
+          "options": [
+            "WhatsApp Web Direct",
+            "WhatsApp Business API",
+            "WhatsApp Bot Creator Studio",
+            "Meta Messenger Protocol"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "La API de WhatsApp Business es la herramienta oficial diseñada para que las medianas y grandes empresas integren software de automatización."
+        },
+        {
+          "id": "q_3",
+          "question": "En el contexto de los chatbots, ¿qué significa la sigla 'NLP' o procesamiento de lenguaje natural?",
+          "options": [
+            "Un protocolo de seguridad para cifrar los chats",
+            "Una red social asociada a WhatsApp",
+            "La capacidad del bot para entender la intención y el contexto humano",
+            "Un límite de caracteres por mensaje"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "El NLP permite que el chatbot interprete mensajes de texto escritos por humanos de forma libre, más allá de simples comandos de botones."
+        },
+        {
+          "id": "q_4",
+          "question": "¿Cuál es una buena práctica al implementar un chatbot en WhatsApp?",
+          "options": [
+            "Ocultar siempre la opción de hablar con una persona real",
+            "Enviar más de 50 mensajes automáticos seguidos al usuario",
+            "Aclarar desde el inicio que se está hablando con un asistente virtual",
+            "Usar únicamente audios generados por computadora"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La transparencia genera confianza; el usuario debe saber que interactúa con un bot y tener la opción de escalar a un agente humano si lo necesita."
+        },
+        {
+          "id": "q_5",
+          "question": "¿Qué son las 'Plantillas de Mensajes' (Message Templates) requeridas por WhatsApp para iniciar una conversación?",
+          "options": [
+            "Diseños visuales para el fondo de pantalla del chat",
+            "Mensajes preaprobados por Meta para enviar notificaciones fuera de la ventana de 24 horas",
+            "Emojis exclusivos para cuentas de empresas",
+            "Guiones de programación en lenguaje Python"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Para evitar el spam, WhatsApp exige que las empresas utilicen plantillas aprobadas cuando desean contactar a un usuario después de que ha pasado la ventana de atención de 24 horas."
+        }
+      ],
+      "mode": "individual",
+      "default_time": 20,
+      "created_by": "usr_super",
+      "created_at": "2026-07-28T01:16:28.851Z"
+    }
+  ],
+  "quiz_sessions": {
+    "325408": {
+      "pin": "325408",
+      "quiz_id": "qz_1785200417683",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre las Leyes de Newton",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cómo se conoce popularmente a la Primera Ley de Newton?",
+          "options": [
+            "Ley de la gravedad",
+            "Ley de la inercia",
+            "Ley de acción y reacción",
+            "Ley de aceleración"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La primera ley establece que un cuerpo permanecerá en reposo o en movimiento rectilíneo uniforme a menos que una fuerza externa actúe sobre él, principio conocido como inercia."
+        },
+        {
+          "id": "q_2",
+          "question": "Matemáticamente, ¿cuál es la fórmula que representa la Segunda Ley de Newton?",
+          "options": [
+            "F = m × a",
+            "E = m × c²",
+            "F = G × (m1 × m2) / d²",
+            "v = d / t"
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "La Segunda Ley de Newton postula que la fuerza (F) es igual a la masa (m) multiplicada por la aceleración (a)."
+        },
+        {
+          "id": "q_3",
+          "question": "Si empujas una pared con una fuerza de 50 N, ¿con qué fuerza empuja la pared tus manos según la Tercera Ley de Newton?",
+          "options": [
+            "0 N",
+            "25 N",
+            "50 N",
+            "100 N"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La Tercera Ley de Newton (Acción y Reacción) indica que las fuerzas ocurren en pares iguales y opuestos. Si ejerces 50 N, la pared ejerce exactamente 50 N en sentido contrario."
+        },
+        {
+          "id": "q_4",
+          "question": "Si la fuerza neta aplicada sobre un objeto de masa constante se duplica, ¿qué le ocurre a su aceleración?",
+          "options": [
+            "Se reduce a la mitad",
+            "Se duplica",
+            "Se cuadruplica",
+            "Permanece igual"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Dado que la aceleración es directamente proporcional a la fuerza neta (a = F/m), si la fuerza se duplica, la aceleración también lo hace."
+        },
+        {
+          "id": "q_5",
+          "question": "¿Cuál de las siguientes situaciones ejemplifica mejor la Primera Ley de Newton?",
+          "options": [
+            "Un cohete despegando al expulsar gases hacia abajo",
+            "Un libro que se cae al suelo por la gravedad",
+            "Un pasajero que se va hacia adelante cuando el autobús frena bruscamente",
+            "Dos personas tirando de una cuerda con la misma fuerza"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "El pasajero se mueve hacia adelante por inercia, ya que su cuerpo tiende a mantener el estado de movimiento que llevaba el autobús antes de frenar."
+        },
+        {
+          "id": "q_6",
+          "question": "En la ecuación de la Segunda Ley de Newton (F = m × a), ¿en qué unidades se mide la fuerza en el Sistema Internacional?",
+          "options": [
+            "Joules (J)",
+            "Watts (W)",
+            "Newtons (N)",
+            "Pascales (Pa)"
+          ],
+          "correct_index": 2,
+          "time_seconds": 15,
+          "explanation": "La unidad de fuerza en el Sistema Internacional es el Newton (N), equivalente a kg·m/s²."
+        },
+        {
+          "id": "q_7",
+          "question": "Cuando un nadador impulsa el agua hacia atrás con sus manos para avanzar hacia adelante, ¿a qué ley de Newton está apelando principalmente?",
+          "options": [
+            "Primera ley",
+            "Segunda ley",
+            "Tercera ley",
+            "Ley de gravitación universal"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "Es la Tercera Ley de Newton: la acción de empujar el agua hacia atrás genera una reacción igual y opuesta que empuja al nadador hacia adelante."
+        },
+        {
+          "id": "q_8",
+          "question": "¿Qué es el marco de referencia inercial?",
+          "options": [
+            "Un sistema donde las Leyes de Newton no son válidas",
+            "Un sistema que se encuentra en reposo o movimiento rectilíneo uniforme",
+            "Un sistema que posee aceleración constante",
+            "Un sistema donde la masa de los objetos cambia constantemente"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Los marcos inerciales son aquellos en los que se cumplen las leyes de movimiento de Newton sin necesidad de introducir fuerzas ficticias, estando en reposo o velocidad constante."
+        },
+        {
+          "id": "q_9",
+          "question": "Si un objeto se encuentra en equilibrio estático (en reposo absoluto), ¿qué se puede afirmar sobre la fuerza neta que actúa sobre él?",
+          "options": [
+            "Es cero",
+            "Es igual a su peso",
+            "Es máxima",
+            "Depende exclusivamente de la fricción"
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "Por la primera ley, si un objeto está en reposo o equilibrio, la sumatoria de todas las fuerzas que actúan sobre él (fuerza neta) es igual a cero."
+        },
+        {
+          "id": "q_10",
+          "question": "Si pateas un balón de fútbol en el espacio exterior (lejos de la gravedad y la atmósfera), ¿qué pasará con el balón según la física de Newton?",
+          "options": [
+            "Se detendrá inmediatamente",
+            "Caerá al suelo lentamente",
+            "Continuará moviéndose en línea recta a velocidad constante indefinidamente",
+            "Girará en círculos hasta perder toda su energía"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "Al no haber fuerzas de fricción con el aire ni resistencia significativa, la primera ley indica que el objeto mantendrá su movimiento rectilíneo uniforme para siempre."
+        }
+      ],
+      "mode": "individual",
+      "status": "question_active",
+      "current_question_index": 2,
+      "question_start_time": 1785200878285,
+      "participants": {},
+      "created_at": "2026-07-28T01:02:48.311Z"
+    },
+    "363373": {
+      "pin": "363373",
+      "quiz_id": "qz_1785200921261",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre las Leyes de Newton",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cómo se conoce popularmente a la Primera Ley de Newton?",
+          "options": [
+            "Ley de la gravedad",
+            "Ley de la inercia",
+            "Ley de acción y reacción",
+            "Ley de aceleración"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La primera ley establece que un objeto permanecerá en reposo o en movimiento rectilíneo uniforme a menos que una fuerza externa actúe sobre él, lo cual define el principio de inercia."
+        },
+        {
+          "id": "q_2",
+          "question": "¿Cuál es la fórmula matemática que expresa la Segunda Ley de Newton?",
+          "options": [
+            "E = mc^2",
+            "F = m * a",
+            "v = d / t",
+            "p = m * v"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La Segunda Ley de Newton establece que la fuerza neta aplicada sobre un cuerpo es directamente proporcional a su aceleración (F = m * a)."
+        },
+        {
+          "id": "q_3",
+          "question": "Si empujas una pared con una fuerza de 50 N, ¿qué fuerza ejerce la pared sobre ti según la Tercera Ley de Newton?",
+          "options": [
+            "0 N",
+            "25 N",
+            "50 N",
+            "100 N"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La tercera ley (acción y reacción) indica que la fuerza que ejerce la pared es de la misma magnitud pero en sentido contrario, es decir, 50 N."
+        },
+        {
+          "id": "q_4",
+          "question": "¿Qué ocurre con la aceleración de un objeto si la masa se duplica manteniendo la fuerza constante?",
+          "options": [
+            "Se duplica",
+            "Se reduce a la mitad",
+            "Se cuadruplica",
+            "Permanece igual"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Como la aceleración es inversamente proporcional a la masa (a = F / m), si la masa se duplica, la aceleración disminuye a la mitad."
+        },
+        {
+          "id": "q_5",
+          "question": "Un astronauta en el espacio exterior lanza una pelota pesada. ¿Qué sucede con la pelota?",
+          "options": [
+            "Se detiene inmediatamente",
+            "Cae al suelo por gravedad",
+            "Continúa moviéndose a velocidad constante en línea recta",
+            "Gira en círculos alrededor del astronauta"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "Debido a la Primera Ley de Newton y la ausencia de fuerzas significativas de fricción o resistencia, la pelota mantendrá su estado de movimiento."
+        },
+        {
+          "id": "q_6",
+          "question": "¿Cuál de las siguientes situaciones ejemplifica mejor la Tercera Ley de Newton?",
+          "options": [
+            "Un coche frenando en un semáforo",
+            "El lanzamiento de un cohete espacial",
+            "Un libro apoyado sobre una mesa",
+            "Una piedra cayendo en caída libre"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Los cohetes se impulsan expulsando gases hacia atrás a alta velocidad; la reacción de estos gases empuja al cohete hacia adelante."
+        },
+        {
+          "id": "q_7",
+          "question": "Si la fuerza neta sobre un objeto es igual a cero, ¿cuál puede ser su estado de movimiento?",
+          "options": [
+            "Únicamente en reposo",
+            "Únicamente moviéndose a velocidad constante",
+            "En reposo o moviéndose con velocidad constante",
+            "Acelerando constantemente"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "La primera ley abarca tanto el reposo (velocidad cero) como el movimiento rectilíneo uniforme (velocidad constante) cuando la fuerza neta es cero."
+        },
+        {
+          "id": "q_8",
+          "question": "¿En qué unidades del Sistema Internacional se mide la fuerza (F) en la Segunda Ley de Newton?",
+          "options": [
+            "Jubios (J)",
+            "Newtons (N)",
+            "Vatios (W)",
+            "Pascales (Pa)"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La unidad de fuerza en el SI es el Newton (N), equivalente a kg·m/s²."
+        },
+        {
+          "id": "q_9",
+          "question": "Cuando vas en un autobús y este frena bruscamente, tu cuerpo se hacia adelante. ¿A qué se debe?",
+          "options": [
+            "A la fuerza de gravedad",
+            "A la inercia",
+            "A la tercera ley de Newton",
+            "A la fricción del aire"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Tu cuerpo tiende a mantener su estado de movimiento anterior debido a la inercia (Primera Ley de Newton) hasta que una fuerza lo detiene."
+        },
+        {
+          "id": "q_10",
+          "question": "Si duplicas la fuerza neta aplicada a un objeto de masa constante, ¿qué le ocurre a su aceleración?",
+          "options": [
+            "Se reduce a la mitad",
+            "Se mantiene igual",
+            "Se duplica",
+            "Se reduce a la cuarta parte"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La aceleración es directamente proporcional a la fuerza aplicada (F = m * a); si la fuerza se duplica, la aceleración también se duplica."
+        }
+      ],
+      "mode": "individual",
+      "status": "finished",
+      "current_question_index": 9,
+      "question_start_time": 1785201521128,
+      "participants": {
+        "p_1785200941708_9h8g": {
+          "id": "p_1785200941708_9h8g",
+          "name": "pepito",
+          "team": "Equipo Azul",
+          "score": 723,
+          "answers": {
+            "0": {
+              "option_index": 1,
+              "is_correct": true,
+              "points": 723,
+              "timestamp": 1785200991122
+            },
+            "1": {
+              "option_index": 0,
+              "is_correct": false,
+              "points": 0,
+              "timestamp": 1785201014133
+            }
+          }
+        },
+        "p_1785200954328_o78j": {
+          "id": "p_1785200954328_o78j",
+          "name": "mauro",
+          "team": "Equipo Azul",
+          "score": 0,
+          "answers": {
+            "0": {
+              "option_index": 0,
+              "is_correct": false,
+              "points": 0,
+              "timestamp": 1785200993937
+            },
+            "1": {
+              "option_index": 2,
+              "is_correct": false,
+              "points": 0,
+              "timestamp": 1785201020969
+            }
+          }
+        }
+      },
+      "created_at": "2026-07-28T01:08:44.661Z"
+    },
+    "440933": {
+      "pin": "440933",
+      "quiz_id": "qz_1785200417683",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre las Leyes de Newton",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cómo se conoce popularmente a la Primera Ley de Newton?",
+          "options": [
+            "Ley de la gravedad",
+            "Ley de la inercia",
+            "Ley de acción y reacción",
+            "Ley de aceleración"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La primera ley establece que un cuerpo permanecerá en reposo o en movimiento rectilíneo uniforme a menos que una fuerza externa actúe sobre él, principio conocido como inercia."
+        },
+        {
+          "id": "q_2",
+          "question": "Matemáticamente, ¿cuál es la fórmula que representa la Segunda Ley de Newton?",
+          "options": [
+            "F = m × a",
+            "E = m × c²",
+            "F = G × (m1 × m2) / d²",
+            "v = d / t"
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "La Segunda Ley de Newton postula que la fuerza (F) es igual a la masa (m) multiplicada por la aceleración (a)."
+        },
+        {
+          "id": "q_3",
+          "question": "Si empujas una pared con una fuerza de 50 N, ¿con qué fuerza empuja la pared tus manos según la Tercera Ley de Newton?",
+          "options": [
+            "0 N",
+            "25 N",
+            "50 N",
+            "100 N"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La Tercera Ley de Newton (Acción y Reacción) indica que las fuerzas ocurren en pares iguales y opuestos. Si ejerces 50 N, la pared ejerce exactamente 50 N en sentido contrario."
+        },
+        {
+          "id": "q_4",
+          "question": "Si la fuerza neta aplicada sobre un objeto de masa constante se duplica, ¿qué le ocurre a su aceleración?",
+          "options": [
+            "Se reduce a la mitad",
+            "Se duplica",
+            "Se cuadruplica",
+            "Permanece igual"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Dado que la aceleración es directamente proporcional a la fuerza neta (a = F/m), si la fuerza se duplica, la aceleración también lo hace."
+        },
+        {
+          "id": "q_5",
+          "question": "¿Cuál de las siguientes situaciones ejemplifica mejor la Primera Ley de Newton?",
+          "options": [
+            "Un cohete despegando al expulsar gases hacia abajo",
+            "Un libro que se cae al suelo por la gravedad",
+            "Un pasajero que se va hacia adelante cuando el autobús frena bruscamente",
+            "Dos personas tirando de una cuerda con la misma fuerza"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "El pasajero se mueve hacia adelante por inercia, ya que su cuerpo tiende a mantener el estado de movimiento que llevaba el autobús antes de frenar."
+        },
+        {
+          "id": "q_6",
+          "question": "En la ecuación de la Segunda Ley de Newton (F = m × a), ¿en qué unidades se mide la fuerza en el Sistema Internacional?",
+          "options": [
+            "Joules (J)",
+            "Watts (W)",
+            "Newtons (N)",
+            "Pascales (Pa)"
+          ],
+          "correct_index": 2,
+          "time_seconds": 15,
+          "explanation": "La unidad de fuerza en el Sistema Internacional es el Newton (N), equivalente a kg·m/s²."
+        },
+        {
+          "id": "q_7",
+          "question": "Cuando un nadador impulsa el agua hacia atrás con sus manos para avanzar hacia adelante, ¿a qué ley de Newton está apelando principalmente?",
+          "options": [
+            "Primera ley",
+            "Segunda ley",
+            "Tercera ley",
+            "Ley de gravitación universal"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "Es la Tercera Ley de Newton: la acción de empujar el agua hacia atrás genera una reacción igual y opuesta que empuja al nadador hacia adelante."
+        },
+        {
+          "id": "q_8",
+          "question": "¿Qué es el marco de referencia inercial?",
+          "options": [
+            "Un sistema donde las Leyes de Newton no son válidas",
+            "Un sistema que se encuentra en reposo o movimiento rectilíneo uniforme",
+            "Un sistema que posee aceleración constante",
+            "Un sistema donde la masa de los objetos cambia constantemente"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Los marcos inerciales son aquellos en los que se cumplen las leyes de movimiento de Newton sin necesidad de introducir fuerzas ficticias, estando en reposo o velocidad constante."
+        },
+        {
+          "id": "q_9",
+          "question": "Si un objeto se encuentra en equilibrio estático (en reposo absoluto), ¿qué se puede afirmar sobre la fuerza neta que actúa sobre él?",
+          "options": [
+            "Es cero",
+            "Es igual a su peso",
+            "Es máxima",
+            "Depende exclusivamente de la fricción"
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "Por la primera ley, si un objeto está en reposo o equilibrio, la sumatoria de todas las fuerzas que actúan sobre él (fuerza neta) es igual a cero."
+        },
+        {
+          "id": "q_10",
+          "question": "Si pateas un balón de fútbol en el espacio exterior (lejos de la gravedad y la atmósfera), ¿qué pasará con el balón según la física de Newton?",
+          "options": [
+            "Se detendrá inmediatamente",
+            "Caerá al suelo lentamente",
+            "Continuará moviéndose en línea recta a velocidad constante indefinidamente",
+            "Girará en círculos hasta perder toda su energía"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "Al no haber fuerzas de fricción con el aire ni resistencia significativa, la primera ley indica que el objeto mantendrá su movimiento rectilíneo uniforme para siempre."
+        }
+      ],
+      "mode": "individual",
+      "status": "question_active",
+      "current_question_index": 1,
+      "question_start_time": 1785200878294,
+      "participants": {
+        "p_1785200466012_ak2x": {
+          "id": "p_1785200466012_ak2x",
+          "name": "pepito",
+          "team": "Equipo Azul",
+          "score": 0,
+          "answers": {
+            "0": {
+              "option_index": 0,
+              "is_correct": false,
+              "points": 0,
+              "timestamp": 1785200543634
+            }
+          }
+        },
+        "p_1785200486612_qcvh": {
+          "id": "p_1785200486612_qcvh",
+          "name": "rosauro",
+          "team": "Equipo Rojo",
+          "score": 0,
+          "answers": {
+            "0": {
+              "option_index": 0,
+              "is_correct": false,
+              "points": 0,
+              "timestamp": 1785200510220
+            }
+          }
+        }
+      },
+      "created_at": "2026-07-28T01:00:36.783Z"
+    },
+    "470149": {
+      "pin": "470149",
+      "quiz_id": "qz_1785201388851",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre Chatbots para WhatsApp",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cuál es la principal ventaja de utilizar un chatbot en WhatsApp Business?",
+          "options": [
+            "Eliminar por completo la necesidad de empleados humanos",
+            "Atender a los clientes de forma automatizada las 24 horas del día",
+            "Garantizar que los mensajes nunca sean leídos por spam",
+            "Reducir el costo de la conexión a internet del teléfono"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Los chatbots permiten ofrecer respuestas instantáneas y atención continua 24/7, mejorando la satisfacción del cliente."
+        },
+        {
+          "id": "q_2",
+          "question": "¿Qué interfaz oficial proporciona Meta para conectar chatbots avanzados a WhatsApp?",
+          "options": [
+            "WhatsApp Web Direct",
+            "WhatsApp Business API",
+            "WhatsApp Bot Creator Studio",
+            "Meta Messenger Protocol"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "La API de WhatsApp Business es la herramienta oficial diseñada para que las medianas y grandes empresas integren software de automatización."
+        },
+        {
+          "id": "q_3",
+          "question": "En el contexto de los chatbots, ¿qué significa la sigla 'NLP' o procesamiento de lenguaje natural?",
+          "options": [
+            "Un protocolo de seguridad para cifrar los chats",
+            "Una red social asociada a WhatsApp",
+            "La capacidad del bot para entender la intención y el contexto humano",
+            "Un límite de caracteres por mensaje"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "El NLP permite que el chatbot interprete mensajes de texto escritos por humanos de forma libre, más allá de simples comandos de botones."
+        },
+        {
+          "id": "q_4",
+          "question": "¿Cuál es una buena práctica al implementar un chatbot en WhatsApp?",
+          "options": [
+            "Ocultar siempre la opción de hablar con una persona real",
+            "Enviar más de 50 mensajes automáticos seguidos al usuario",
+            "Aclarar desde el inicio que se está hablando con un asistente virtual",
+            "Usar únicamente audios generados por computadora"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La transparencia genera confianza; el usuario debe saber que interactúa con un bot y tener la opción de escalar a un agente humano si lo necesita."
+        },
+        {
+          "id": "q_5",
+          "question": "¿Qué son las 'Plantillas de Mensajes' (Message Templates) requeridas por WhatsApp para iniciar una conversación?",
+          "options": [
+            "Diseños visuales para el fondo de pantalla del chat",
+            "Mensajes preaprobados por Meta para enviar notificaciones fuera de la ventana de 24 horas",
+            "Emojis exclusivos para cuentas de empresas",
+            "Guiones de programación en lenguaje Python"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Para evitar el spam, WhatsApp exige que las empresas utilicen plantillas aprobadas cuando desean contactar a un usuario después de que ha pasado la ventana de atención de 24 horas."
+        }
+      ],
+      "mode": "individual",
+      "status": "waiting",
+      "current_question_index": 0,
+      "question_start_time": null,
+      "participants": {},
+      "created_at": "2026-07-28T01:17:34.696Z"
+    },
+    "835760": {
+      "pin": "835760",
+      "quiz_id": "qz_1785200417683",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre las Leyes de Newton",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cómo se conoce popularmente a la Primera Ley de Newton?",
+          "options": [
+            "Ley de la gravedad",
+            "Ley de la inercia",
+            "Ley de acción y reacción",
+            "Ley de aceleración"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La primera ley establece que un cuerpo permanecerá en reposo o en movimiento rectilíneo uniforme a menos que una fuerza externa actúe sobre él, principio conocido como inercia."
+        },
+        {
+          "id": "q_2",
+          "question": "Matemáticamente, ¿cuál es la fórmula que representa la Segunda Ley de Newton?",
+          "options": [
+            "F = m × a",
+            "E = m × c²",
+            "F = G × (m1 × m2) / d²",
+            "v = d / t"
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "La Segunda Ley de Newton postula que la fuerza (F) es igual a la masa (m) multiplicada por la aceleración (a)."
+        },
+        {
+          "id": "q_3",
+          "question": "Si empujas una pared con una fuerza de 50 N, ¿con qué fuerza empuja la pared tus manos según la Tercera Ley de Newton?",
+          "options": [
+            "0 N",
+            "25 N",
+            "50 N",
+            "100 N"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La Tercera Ley de Newton (Acción y Reacción) indica que las fuerzas ocurren en pares iguales y opuestos. Si ejerces 50 N, la pared ejerce exactamente 50 N en sentido contrario."
+        },
+        {
+          "id": "q_4",
+          "question": "Si la fuerza neta aplicada sobre un objeto de masa constante se duplica, ¿qué le ocurre a su aceleración?",
+          "options": [
+            "Se reduce a la mitad",
+            "Se duplica",
+            "Se cuadruplica",
+            "Permanece igual"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Dado que la aceleración es directamente proporcional a la fuerza neta (a = F/m), si la fuerza se duplica, la aceleración también lo hace."
+        },
+        {
+          "id": "q_5",
+          "question": "¿Cuál de las siguientes situaciones ejemplifica mejor la Primera Ley de Newton?",
+          "options": [
+            "Un cohete despegando al expulsar gases hacia abajo",
+            "Un libro que se cae al suelo por la gravedad",
+            "Un pasajero que se va hacia adelante cuando el autobús frena bruscamente",
+            "Dos personas tirando de una cuerda con la misma fuerza"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "El pasajero se mueve hacia adelante por inercia, ya que su cuerpo tiende a mantener el estado de movimiento que llevaba el autobús antes de frenar."
+        },
+        {
+          "id": "q_6",
+          "question": "En la ecuación de la Segunda Ley de Newton (F = m × a), ¿en qué unidades se mide la fuerza en el Sistema Internacional?",
+          "options": [
+            "Joules (J)",
+            "Watts (W)",
+            "Newtons (N)",
+            "Pascales (Pa)"
+          ],
+          "correct_index": 2,
+          "time_seconds": 15,
+          "explanation": "La unidad de fuerza en el Sistema Internacional es el Newton (N), equivalente a kg·m/s²."
+        },
+        {
+          "id": "q_7",
+          "question": "Cuando un nadador impulsa el agua hacia atrás con sus manos para avanzar hacia adelante, ¿a qué ley de Newton está apelando principalmente?",
+          "options": [
+            "Primera ley",
+            "Segunda ley",
+            "Tercera ley",
+            "Ley de gravitación universal"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "Es la Tercera Ley de Newton: la acción de empujar el agua hacia atrás genera una reacción igual y opuesta que empuja al nadador hacia adelante."
+        },
+        {
+          "id": "q_8",
+          "question": "¿Qué es el marco de referencia inercial?",
+          "options": [
+            "Un sistema donde las Leyes de Newton no son válidas",
+            "Un sistema que se encuentra en reposo o movimiento rectilíneo uniforme",
+            "Un sistema que posee aceleración constante",
+            "Un sistema donde la masa de los objetos cambia constantemente"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Los marcos inerciales son aquellos en los que se cumplen las leyes de movimiento de Newton sin necesidad de introducir fuerzas ficticias, estando en reposo o velocidad constante."
+        },
+        {
+          "id": "q_9",
+          "question": "Si un objeto se encuentra en equilibrio estático (en reposo absoluto), ¿qué se puede afirmar sobre la fuerza neta que actúa sobre él?",
+          "options": [
+            "Es cero",
+            "Es igual a su peso",
+            "Es máxima",
+            "Depende exclusivamente de la fricción"
+          ],
+          "correct_index": 0,
+          "time_seconds": 20,
+          "explanation": "Por la primera ley, si un objeto está en reposo o equilibrio, la sumatoria de todas las fuerzas que actúan sobre él (fuerza neta) es igual a cero."
+        },
+        {
+          "id": "q_10",
+          "question": "Si pateas un balón de fútbol en el espacio exterior (lejos de la gravedad y la atmósfera), ¿qué pasará con el balón según la física de Newton?",
+          "options": [
+            "Se detendrá inmediatamente",
+            "Caerá al suelo lentamente",
+            "Continuará moviéndose en línea recta a velocidad constante indefinidamente",
+            "Girará en círculos hasta perder toda su energía"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "Al no haber fuerzas de fricción con el aire ni resistencia significativa, la primera ley indica que el objeto mantendrá su movimiento rectilíneo uniforme para siempre."
+        }
+      ],
+      "mode": "individual",
+      "status": "waiting",
+      "current_question_index": 0,
+      "question_start_time": null,
+      "participants": {},
+      "created_at": "2026-07-28T01:03:20.889Z"
+    },
+    "890027": {
+      "pin": "890027",
+      "quiz_id": "qz_1785200921261",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre las Leyes de Newton",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cómo se conoce popularmente a la Primera Ley de Newton?",
+          "options": [
+            "Ley de la gravedad",
+            "Ley de la inercia",
+            "Ley de acción y reacción",
+            "Ley de aceleración"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La primera ley establece que un objeto permanecerá en reposo o en movimiento rectilíneo uniforme a menos que una fuerza externa actúe sobre él, lo cual define el principio de inercia."
+        },
+        {
+          "id": "q_2",
+          "question": "¿Cuál es la fórmula matemática que expresa la Segunda Ley de Newton?",
+          "options": [
+            "E = mc^2",
+            "F = m * a",
+            "v = d / t",
+            "p = m * v"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La Segunda Ley de Newton establece que la fuerza neta aplicada sobre un cuerpo es directamente proporcional a su aceleración (F = m * a)."
+        },
+        {
+          "id": "q_3",
+          "question": "Si empujas una pared con una fuerza de 50 N, ¿qué fuerza ejerce la pared sobre ti según la Tercera Ley de Newton?",
+          "options": [
+            "0 N",
+            "25 N",
+            "50 N",
+            "100 N"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La tercera ley (acción y reacción) indica que la fuerza que ejerce la pared es de la misma magnitud pero en sentido contrario, es decir, 50 N."
+        },
+        {
+          "id": "q_4",
+          "question": "¿Qué ocurre con la aceleración de un objeto si la masa se duplica manteniendo la fuerza constante?",
+          "options": [
+            "Se duplica",
+            "Se reduce a la mitad",
+            "Se cuadruplica",
+            "Permanece igual"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Como la aceleración es inversamente proporcional a la masa (a = F / m), si la masa se duplica, la aceleración disminuye a la mitad."
+        },
+        {
+          "id": "q_5",
+          "question": "Un astronauta en el espacio exterior lanza una pelota pesada. ¿Qué sucede con la pelota?",
+          "options": [
+            "Se detiene inmediatamente",
+            "Cae al suelo por gravedad",
+            "Continúa moviéndose a velocidad constante en línea recta",
+            "Gira en círculos alrededor del astronauta"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "Debido a la Primera Ley de Newton y la ausencia de fuerzas significativas de fricción o resistencia, la pelota mantendrá su estado de movimiento."
+        },
+        {
+          "id": "q_6",
+          "question": "¿Cuál de las siguientes situaciones ejemplifica mejor la Tercera Ley de Newton?",
+          "options": [
+            "Un coche frenando en un semáforo",
+            "El lanzamiento de un cohete espacial",
+            "Un libro apoyado sobre una mesa",
+            "Una piedra cayendo en caída libre"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Los cohetes se impulsan expulsando gases hacia atrás a alta velocidad; la reacción de estos gases empuja al cohete hacia adelante."
+        },
+        {
+          "id": "q_7",
+          "question": "Si la fuerza neta sobre un objeto es igual a cero, ¿cuál puede ser su estado de movimiento?",
+          "options": [
+            "Únicamente en reposo",
+            "Únicamente moviéndose a velocidad constante",
+            "En reposo o moviéndose con velocidad constante",
+            "Acelerando constantemente"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "La primera ley abarca tanto el reposo (velocidad cero) como el movimiento rectilíneo uniforme (velocidad constante) cuando la fuerza neta es cero."
+        },
+        {
+          "id": "q_8",
+          "question": "¿En qué unidades del Sistema Internacional se mide la fuerza (F) en la Segunda Ley de Newton?",
+          "options": [
+            "Jubios (J)",
+            "Newtons (N)",
+            "Vatios (W)",
+            "Pascales (Pa)"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La unidad de fuerza en el SI es el Newton (N), equivalente a kg·m/s²."
+        },
+        {
+          "id": "q_9",
+          "question": "Cuando vas en un autobús y este frena bruscamente, tu cuerpo se hacia adelante. ¿A qué se debe?",
+          "options": [
+            "A la fuerza de gravedad",
+            "A la inercia",
+            "A la tercera ley de Newton",
+            "A la fricción del aire"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Tu cuerpo tiende a mantener su estado de movimiento anterior debido a la inercia (Primera Ley de Newton) hasta que una fuerza lo detiene."
+        },
+        {
+          "id": "q_10",
+          "question": "Si duplicas la fuerza neta aplicada a un objeto de masa constante, ¿qué le ocurre a su aceleración?",
+          "options": [
+            "Se reduce a la mitad",
+            "Se mantiene igual",
+            "Se duplica",
+            "Se reduce a la cuarta parte"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La aceleración es directamente proporcional a la fuerza aplicada (F = m * a); si la fuerza se duplica, la aceleración también se duplica."
+        }
+      ],
+      "mode": "individual",
+      "status": "waiting",
+      "current_question_index": 0,
+      "question_start_time": null,
+      "participants": {},
+      "created_at": "2026-07-28T01:11:02.768Z"
+    },
+    "939793": {
+      "pin": "939793",
+      "quiz_id": "qz_1785200921261",
+      "course_id": "crs_mat",
+      "title": "Quiz sobre las Leyes de Newton",
+      "questions": [
+        {
+          "id": "q_1",
+          "question": "¿Cómo se conoce popularmente a la Primera Ley de Newton?",
+          "options": [
+            "Ley de la gravedad",
+            "Ley de la inercia",
+            "Ley de acción y reacción",
+            "Ley de aceleración"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La primera ley establece que un objeto permanecerá en reposo o en movimiento rectilíneo uniforme a menos que una fuerza externa actúe sobre él, lo cual define el principio de inercia."
+        },
+        {
+          "id": "q_2",
+          "question": "¿Cuál es la fórmula matemática que expresa la Segunda Ley de Newton?",
+          "options": [
+            "E = mc^2",
+            "F = m * a",
+            "v = d / t",
+            "p = m * v"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La Segunda Ley de Newton establece que la fuerza neta aplicada sobre un cuerpo es directamente proporcional a su aceleración (F = m * a)."
+        },
+        {
+          "id": "q_3",
+          "question": "Si empujas una pared con una fuerza de 50 N, ¿qué fuerza ejerce la pared sobre ti según la Tercera Ley de Newton?",
+          "options": [
+            "0 N",
+            "25 N",
+            "50 N",
+            "100 N"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La tercera ley (acción y reacción) indica que la fuerza que ejerce la pared es de la misma magnitud pero en sentido contrario, es decir, 50 N."
+        },
+        {
+          "id": "q_4",
+          "question": "¿Qué ocurre con la aceleración de un objeto si la masa se duplica manteniendo la fuerza constante?",
+          "options": [
+            "Se duplica",
+            "Se reduce a la mitad",
+            "Se cuadruplica",
+            "Permanece igual"
+          ],
+          "correct_index": 1,
+          "time_seconds": 30,
+          "explanation": "Como la aceleración es inversamente proporcional a la masa (a = F / m), si la masa se duplica, la aceleración disminuye a la mitad."
+        },
+        {
+          "id": "q_5",
+          "question": "Un astronauta en el espacio exterior lanza una pelota pesada. ¿Qué sucede con la pelota?",
+          "options": [
+            "Se detiene inmediatamente",
+            "Cae al suelo por gravedad",
+            "Continúa moviéndose a velocidad constante en línea recta",
+            "Gira en círculos alrededor del astronauta"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "Debido a la Primera Ley de Newton y la ausencia de fuerzas significativas de fricción o resistencia, la pelota mantendrá su estado de movimiento."
+        },
+        {
+          "id": "q_6",
+          "question": "¿Cuál de las siguientes situaciones ejemplifica mejor la Tercera Ley de Newton?",
+          "options": [
+            "Un coche frenando en un semáforo",
+            "El lanzamiento de un cohete espacial",
+            "Un libro apoyado sobre una mesa",
+            "Una piedra cayendo en caída libre"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Los cohetes se impulsan expulsando gases hacia atrás a alta velocidad; la reacción de estos gases empuja al cohete hacia adelante."
+        },
+        {
+          "id": "q_7",
+          "question": "Si la fuerza neta sobre un objeto es igual a cero, ¿cuál puede ser su estado de movimiento?",
+          "options": [
+            "Únicamente en reposo",
+            "Únicamente moviéndose a velocidad constante",
+            "En reposo o moviéndose con velocidad constante",
+            "Acelerando constantemente"
+          ],
+          "correct_index": 2,
+          "time_seconds": 30,
+          "explanation": "La primera ley abarca tanto el reposo (velocidad cero) como el movimiento rectilíneo uniforme (velocidad constante) cuando la fuerza neta es cero."
+        },
+        {
+          "id": "q_8",
+          "question": "¿En qué unidades del Sistema Internacional se mide la fuerza (F) en la Segunda Ley de Newton?",
+          "options": [
+            "Jubios (J)",
+            "Newtons (N)",
+            "Vatios (W)",
+            "Pascales (Pa)"
+          ],
+          "correct_index": 1,
+          "time_seconds": 15,
+          "explanation": "La unidad de fuerza en el SI es el Newton (N), equivalente a kg·m/s²."
+        },
+        {
+          "id": "q_9",
+          "question": "Cuando vas en un autobús y este frena bruscamente, tu cuerpo se hacia adelante. ¿A qué se debe?",
+          "options": [
+            "A la fuerza de gravedad",
+            "A la inercia",
+            "A la tercera ley de Newton",
+            "A la fricción del aire"
+          ],
+          "correct_index": 1,
+          "time_seconds": 20,
+          "explanation": "Tu cuerpo tiende a mantener su estado de movimiento anterior debido a la inercia (Primera Ley de Newton) hasta que una fuerza lo detiene."
+        },
+        {
+          "id": "q_10",
+          "question": "Si duplicas la fuerza neta aplicada a un objeto de masa constante, ¿qué le ocurre a su aceleración?",
+          "options": [
+            "Se reduce a la mitad",
+            "Se mantiene igual",
+            "Se duplica",
+            "Se reduce a la cuarta parte"
+          ],
+          "correct_index": 2,
+          "time_seconds": 20,
+          "explanation": "La aceleración es directamente proporcional a la fuerza aplicada (F = m * a); si la fuerza se duplica, la aceleración también se duplica."
+        }
+      ],
+      "mode": "individual",
+      "status": "waiting",
+      "current_question_index": 0,
+      "question_start_time": null,
+      "participants": {},
+      "created_at": "2026-07-28T01:10:54.912Z"
+    }
+  }
 }
